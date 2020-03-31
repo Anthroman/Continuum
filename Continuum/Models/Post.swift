@@ -14,6 +14,7 @@ class Post {
     let timestamp: Date
     let caption: String
     var comments: [Comment]
+    var commentCount: Int
     var photo: UIImage? {
         get {
             guard let photoData = photoData else {return nil}
@@ -23,10 +24,11 @@ class Post {
         }
     }
     
-    init(photo: UIImage?, caption: String, timestamp: Date = Date(), comments: [Comment] = []) {
+    init(photo: UIImage?, caption: String, timestamp: Date = Date(), comments: [Comment] = [], commentCount: Int = 0) {
         self.caption = caption
         self.timestamp = timestamp
         self.comments = comments
+        self.commentCount = commentCount
         self.photo = photo
     }
     

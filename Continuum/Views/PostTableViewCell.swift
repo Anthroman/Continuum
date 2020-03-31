@@ -10,4 +10,23 @@ import UIKit
 
 class PostTableViewCell: UITableViewCell {
 
+    //MARK: - Outlets
+    
+    @IBOutlet weak var postImageView: UIImageView!
+    @IBOutlet weak var postCaptionLabel: UILabel!
+    @IBOutlet weak var commentCountLabel: UILabel!
+    
+    //MARK: - Properties
+    
+    var post: Post? {
+        didSet {
+            updateViews()
+        }
+    }
+    
+    func updateViews() {
+        postImageView.image = post?.photo
+        postCaptionLabel.text = post?.caption
+        commentCountLabel.text = "Comments: \(String(describing: post?.commentCount))"
+    }
 }

@@ -10,26 +10,63 @@ import UIKit
 
 class PostDetailTableViewController: UITableViewController {
 
+    //MARK: - Outlets
+    
+    @IBOutlet weak var photoImageView: UIImageView!
+    
+    //MARK: - Properties
+    var post: Post? {
+        didSet {
+            updateViews()
+        }
+    }
+    
+    //MARK: - Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
 
+    //MARK: - Actions
+    
+    @IBAction func commentButtonTapped(_ sender: UIButton) {
+        let alertController = UIAlertController(title: "Add comment", message: "", preferredStyle: .alert)
+        
+        alertController.addTextField { (textField) in
+            textField.placeholder = "Enter comment here..."
+        }
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        
+        let confirmAction = UIAlertAction(title: "Add", style: .default, handler: nil) {
+        
+            guard let comment = alertController.textFields?.first?.text, !comment.isEmpty, let post = post else {return}
+            
+            PostController.shared.addComment(text: comment, post: post) { (<#Result<Comment, PostError>#>) in
+                <#code#>
+            }
+            
+        alertController.addAction(cancelAction)
+        alertController.addAction(confirmAction)
+        }
+    }
+    
+    @IBAction func shareButtonTapped(_ sender: UIButton) {
+    }
+    
+    @IBAction func followButtonTapped(_ sender: UIButton) {
+    }
+    
+    func updateViews() {
+        photoImageView.image = post?.photo
+        tableView.reloadData()
+    }
+    
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
-
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        return post?.comments.count ?? 0
     }
 
     /*
