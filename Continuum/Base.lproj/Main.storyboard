@@ -190,30 +190,120 @@
             </objects>
             <point key="canvasLocation" x="1944.8" y="-629.2353823088456"/>
         </scene>
-        <!--Root View Controller-->
+        <!--New Post-->
         <scene sceneID="ngq-5K-u3m">
             <objects>
                 <tableViewController id="VZ9-F0-hfd" customClass="AddPostTableViewController" customModule="Continuum" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="hL0-R0-FAu">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="hL0-R0-FAu">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="57" id="70s-ju-AP0">
-                                <rect key="frame" x="0.0" y="28" width="375" height="57"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="70s-ju-AP0" id="9lL-TR-M8T">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="57"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
+                        <sections>
+                            <tableViewSection headerTitle="Upload Your Picture" id="ORf-7F-iDo">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="194" id="DeZ-ae-HtF">
+                                        <rect key="frame" x="0.0" y="55.5" width="375" height="194"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="DeZ-ae-HtF" id="KVE-qt-3hn">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="194"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eXZ-bd-U4K">
+                                                    <rect key="frame" x="16" y="11" width="343" height="172"/>
+                                                </imageView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r2y-cg-Pib">
+                                                    <rect key="frame" x="16" y="11" width="343" height="172"/>
+                                                    <state key="normal" title="Select Image" image="spaceEmptyState"/>
+                                                    <connections>
+                                                        <action selector="selectImageButtonTapped:" destination="VZ9-F0-hfd" eventType="touchUpInside" id="ekl-5H-z1S"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="eXZ-bd-U4K" secondAttribute="bottom" id="6gE-MN-DHH"/>
+                                                <constraint firstItem="r2y-cg-Pib" firstAttribute="leading" secondItem="KVE-qt-3hn" secondAttribute="leadingMargin" id="7jh-Kj-fRY"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="r2y-cg-Pib" secondAttribute="trailing" id="GcQ-LD-cVD"/>
+                                                <constraint firstItem="r2y-cg-Pib" firstAttribute="top" secondItem="KVE-qt-3hn" secondAttribute="topMargin" id="Oxl-DH-WuN"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="eXZ-bd-U4K" secondAttribute="trailing" id="eGV-i7-ix9"/>
+                                                <constraint firstItem="eXZ-bd-U4K" firstAttribute="leading" secondItem="KVE-qt-3hn" secondAttribute="leadingMargin" id="slb-iW-QEF"/>
+                                                <constraint firstItem="eXZ-bd-U4K" firstAttribute="top" secondItem="KVE-qt-3hn" secondAttribute="topMargin" id="vhr-Kr-Ond"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="r2y-cg-Pib" secondAttribute="bottom" id="xgi-Eg-ArE"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Choose something witty to say" id="Cyc-Ea-d0z">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="57" id="wlX-5y-efC">
+                                        <rect key="frame" x="0.0" y="305.5" width="375" height="57"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wlX-5y-efC" id="kWN-uW-4oh">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="57"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter image caption..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VgJ-Lc-dQS">
+                                                    <rect key="frame" x="16" y="11" width="343" height="35"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="VgJ-Lc-dQS" secondAttribute="trailing" id="BmZ-f4-32z"/>
+                                                <constraint firstItem="VgJ-Lc-dQS" firstAttribute="leading" secondItem="kWN-uW-4oh" secondAttribute="leadingMargin" id="Phf-2c-HAH"/>
+                                                <constraint firstItem="VgJ-Lc-dQS" firstAttribute="bottom" secondItem="kWN-uW-4oh" secondAttribute="bottomMargin" id="lHL-Bk-7Xv"/>
+                                                <constraint firstItem="VgJ-Lc-dQS" firstAttribute="top" secondItem="kWN-uW-4oh" secondAttribute="topMargin" id="tqe-SK-GZL"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Post it!" id="Yjm-ep-Z5E">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="57" id="nD3-FR-JLo">
+                                        <rect key="frame" x="0.0" y="418.5" width="375" height="57"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="nD3-FR-JLo" id="toi-Uj-Lh5">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="57"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J0E-Kj-W5C">
+                                                    <rect key="frame" x="16" y="11" width="343" height="35"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                    <state key="normal" title="Add Post"/>
+                                                    <connections>
+                                                        <action selector="addPostButtonTapped:" destination="VZ9-F0-hfd" eventType="touchUpInside" id="Bpn-5S-w7g"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="J0E-Kj-W5C" secondAttribute="bottom" id="0a2-BM-l3g"/>
+                                                <constraint firstItem="J0E-Kj-W5C" firstAttribute="top" secondItem="toi-Uj-Lh5" secondAttribute="topMargin" id="A3K-Zz-7ZM"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="J0E-Kj-W5C" secondAttribute="trailing" id="B8F-xR-ul5"/>
+                                                <constraint firstItem="J0E-Kj-W5C" firstAttribute="leading" secondItem="toi-Uj-Lh5" secondAttribute="leadingMargin" id="fjF-lc-tRi"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
                         <connections>
                             <outlet property="dataSource" destination="VZ9-F0-hfd" id="7rP-sX-Uq1"/>
                             <outlet property="delegate" destination="VZ9-F0-hfd" id="tkY-Rf-3RA"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="eZ9-71-Wnc"/>
+                    <navigationItem key="navigationItem" title="New Post" id="eZ9-71-Wnc">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="JYh-Pp-0Z3">
+                            <connections>
+                                <action selector="cancelButtonTapped:" destination="VZ9-F0-hfd" id="B4r-bq-tXQ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="captionTextField" destination="VgJ-Lc-dQS" id="Ewj-bl-8f6"/>
+                        <outlet property="postImageView" destination="eXZ-bd-U4K" id="xdL-a3-zld"/>
+                        <outlet property="selectImageButtonImageView" destination="r2y-cg-Pib" id="5sF-Ay-AzA"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="grd-aA-VFw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -256,5 +346,6 @@
     </scenes>
     <resources>
         <image name="Bulgogi_Beef__Main_" width="1400" height="1400"/>
+        <image name="spaceEmptyState" width="1024" height="569"/>
     </resources>
 </document>

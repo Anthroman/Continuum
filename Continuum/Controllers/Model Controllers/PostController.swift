@@ -23,7 +23,7 @@ class PostController {
         post.comments.append(newComment)
     }
     
-    func createPostWith(photo: UIImage, caption: String, comments: [Comment], completion: @escaping (Result<Post?, PostError>) -> Void) {
+    func createPostWith(photo: UIImage, caption: String, completion: @escaping (Result<Post?, PostError>) -> Void) {
         
         let newPost = Post(photo: photo, caption: caption)
         PostController.shared.posts.append(newPost)
