@@ -26,7 +26,7 @@ class PostListTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        captionSearchBar.autocapitalizationType = .none
         captionSearchBar.delegate = self
     }
     
@@ -65,6 +65,7 @@ class PostListTableViewController: UITableViewController {
 }
 
 extension PostListTableViewController: UISearchBarDelegate {
+    
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         
         if !searchText.isEmpty {

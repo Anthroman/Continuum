@@ -216,30 +216,6 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="DeZ-ae-HtF" id="KVE-qt-3hn">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="194"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eXZ-bd-U4K">
-                                                    <rect key="frame" x="16" y="11" width="343" height="172"/>
-                                                </imageView>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r2y-cg-Pib">
-                                                    <rect key="frame" x="16" y="11" width="343" height="172"/>
-                                                    <state key="normal" title="Select Image">
-                                                        <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    </state>
-                                                    <connections>
-                                                        <action selector="selectImageButtonTapped:" destination="VZ9-F0-hfd" eventType="touchUpInside" id="ekl-5H-z1S"/>
-                                                    </connections>
-                                                </button>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstAttribute="bottomMargin" secondItem="eXZ-bd-U4K" secondAttribute="bottom" id="6gE-MN-DHH"/>
-                                                <constraint firstItem="r2y-cg-Pib" firstAttribute="leading" secondItem="KVE-qt-3hn" secondAttribute="leadingMargin" id="7jh-Kj-fRY"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="r2y-cg-Pib" secondAttribute="trailing" id="GcQ-LD-cVD"/>
-                                                <constraint firstItem="r2y-cg-Pib" firstAttribute="top" secondItem="KVE-qt-3hn" secondAttribute="topMargin" id="Oxl-DH-WuN"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="eXZ-bd-U4K" secondAttribute="trailing" id="eGV-i7-ix9"/>
-                                                <constraint firstItem="eXZ-bd-U4K" firstAttribute="leading" secondItem="KVE-qt-3hn" secondAttribute="leadingMargin" id="slb-iW-QEF"/>
-                                                <constraint firstItem="eXZ-bd-U4K" firstAttribute="top" secondItem="KVE-qt-3hn" secondAttribute="topMargin" id="vhr-Kr-Ond"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="r2y-cg-Pib" secondAttribute="bottom" id="xgi-Eg-ArE"/>
-                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
@@ -292,6 +268,32 @@
                                                 <constraint firstItem="J0E-Kj-W5C" firstAttribute="top" secondItem="toi-Uj-Lh5" secondAttribute="topMargin" id="A3K-Zz-7ZM"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="J0E-Kj-W5C" secondAttribute="trailing" id="B8F-xR-ul5"/>
                                                 <constraint firstItem="J0E-Kj-W5C" firstAttribute="leading" secondItem="toi-Uj-Lh5" secondAttribute="leadingMargin" id="fjF-lc-tRi"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="" id="8tI-w9-BAx">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="57" id="lyg-Ef-bBc">
+                                        <rect key="frame" x="0.0" y="515.5" width="375" height="57"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lyg-Ef-bBc" id="MjY-Ps-1ES">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="57"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f9c-bY-6w9">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="57"/>
+                                                    <connections>
+                                                        <segue destination="kts-oV-CtB" kind="embed" identifier="toPhotoSelectChildView" id="4A4-Yc-CYW"/>
+                                                    </connections>
+                                                </containerView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="f9c-bY-6w9" firstAttribute="top" secondItem="MjY-Ps-1ES" secondAttribute="top" id="bEx-rP-RC7"/>
+                                                <constraint firstAttribute="trailing" secondItem="f9c-bY-6w9" secondAttribute="trailing" id="bSZ-A2-JSq"/>
+                                                <constraint firstAttribute="bottom" secondItem="f9c-bY-6w9" secondAttribute="bottom" id="iE6-6i-jRn"/>
+                                                <constraint firstItem="f9c-bY-6w9" firstAttribute="leading" secondItem="MjY-Ps-1ES" secondAttribute="leading" id="k9q-kP-yt2"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -353,6 +355,52 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Et9-Dd-bpD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="122" y="-629"/>
+        </scene>
+        <!--Photo Selector View Controller-->
+        <scene sceneID="LdJ-qL-6Ce">
+            <objects>
+                <viewController id="kts-oV-CtB" customClass="PhotoSelectorViewController" customModule="Continuum" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wN4-Cv-J8w">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="57"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eXZ-bd-U4K">
+                                <rect key="frame" x="-46" y="141" width="105" height="172"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r2y-cg-Pib">
+                                <rect key="frame" x="-46" y="141" width="105" height="172"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="172" id="zAR-tt-t80"/>
+                                </constraints>
+                                <state key="normal" title="Select Image">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="selectImageButtonTapped:" destination="VZ9-F0-hfd" eventType="touchUpInside" id="ekl-5H-z1S"/>
+                                    <action selector="selectImageButtonTapped:" destination="kts-oV-CtB" eventType="touchUpInside" id="oGO-OE-sx0"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="r2y-cg-Pib" firstAttribute="leading" secondItem="eXZ-bd-U4K" secondAttribute="leading" id="Es7-qD-TqB"/>
+                            <constraint firstItem="r2y-cg-Pib" firstAttribute="trailing" secondItem="eXZ-bd-U4K" secondAttribute="trailing" id="UIS-mV-Omf"/>
+                            <constraint firstItem="r2y-cg-Pib" firstAttribute="top" secondItem="wN4-Cv-J8w" secondAttribute="top" constant="141" id="bOr-W6-BcP"/>
+                            <constraint firstItem="r2y-cg-Pib" firstAttribute="top" secondItem="eXZ-bd-U4K" secondAttribute="top" id="kiT-uP-7P4"/>
+                            <constraint firstItem="r2y-cg-Pib" firstAttribute="bottom" secondItem="eXZ-bd-U4K" secondAttribute="bottom" id="win-3Q-Zl3"/>
+                            <constraint firstItem="r2y-cg-Pib" firstAttribute="leading" secondItem="wN4-Cv-J8w" secondAttribute="leadingMargin" constant="-62" id="wu1-3P-guL"/>
+                            <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="r2y-cg-Pib" secondAttribute="trailing" id="x4M-Z2-RNU"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="postImageView" destination="eXZ-bd-U4K" id="LZj-vF-jmg"/>
+                        <outlet property="selectImageButton" destination="r2y-cg-Pib" id="0Yr-Pa-ktw"/>
+                        <outlet property="selectedImageView" destination="eXZ-bd-U4K" id="g5N-Q9-Wt5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WdA-Lm-cxE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1306" y="609"/>
         </scene>
     </scenes>
     <resources>

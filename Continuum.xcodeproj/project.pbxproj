@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6D8998E224354EE800E7349A /* PhotoSelectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8998E124354EE800E7349A /* PhotoSelectorViewController.swift */; };
 		6DDE107F2433E05B00DC04F9 /* PostListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DDE107E2433E05B00DC04F9 /* PostListTableViewController.swift */; };
 		6DDE10812433E0AC00DC04F9 /* PostDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DDE10802433E0AC00DC04F9 /* PostDetailTableViewController.swift */; };
 		6DDE10832433E14900DC04F9 /* AddPostTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DDE10822433E14900DC04F9 /* AddPostTableViewController.swift */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6D8998E124354EE800E7349A /* PhotoSelectorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoSelectorViewController.swift; sourceTree = "<group>"; };
 		6DDE107E2433E05B00DC04F9 /* PostListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListTableViewController.swift; sourceTree = "<group>"; };
 		6DDE10802433E0AC00DC04F9 /* PostDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailTableViewController.swift; sourceTree = "<group>"; };
 		6DDE10822433E14900DC04F9 /* AddPostTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPostTableViewController.swift; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 				6DDE107E2433E05B00DC04F9 /* PostListTableViewController.swift */,
 				6DDE10802433E0AC00DC04F9 /* PostDetailTableViewController.swift */,
 				6DDE10822433E14900DC04F9 /* AddPostTableViewController.swift */,
+				6D8998E124354EE800E7349A /* PhotoSelectorViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -225,6 +228,7 @@
 				6DDE107F2433E05B00DC04F9 /* PostListTableViewController.swift in Sources */,
 				6DDE108E2433E95500DC04F9 /* DateExtension.swift in Sources */,
 				6DDE10832433E14900DC04F9 /* AddPostTableViewController.swift in Sources */,
+				6D8998E224354EE800E7349A /* PhotoSelectorViewController.swift in Sources */,
 				6DDE10892433E8A300DC04F9 /* PostController.swift in Sources */,
 				6DDE10912433EE4F00DC04F9 /* PostTableViewCell.swift in Sources */,
 				6DDE10812433E0AC00DC04F9 /* PostDetailTableViewController.swift in Sources */,
