@@ -27,6 +27,6 @@ class PostTableViewCell: UITableViewCell {
     func updateViews() {
         postImageView.image = post?.photo
         postCaptionLabel.text = post?.caption
-        commentCountLabel.text = "Comments: \(String(describing: post?.commentCount))"
+        commentCountLabel.text = "Comments: \((post?.commentCount) ?? 0)"
     }
 }

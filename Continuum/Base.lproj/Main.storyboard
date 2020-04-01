@@ -33,12 +33,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" showsCancelButton="YES" id="SJ3-vv-N7i">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </searchBar>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="postCell" rowHeight="358" id="FCo-sR-Mni" customClass="PostTableViewCell" customModule="Continuum" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="358"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="postCell" rowHeight="342" id="FCo-sR-Mni" customClass="PostTableViewCell" customModule="Continuum" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="72" width="375" height="342"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FCo-sR-Mni" id="XB8-AI-44g">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="358"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="342"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Bulgogi_Beef__Main_" translatesAutoresizingMaskIntoConstraints="NO" id="u5T-ng-AmU">
@@ -65,6 +70,7 @@
                                         <constraint firstItem="u5T-ng-AmU" firstAttribute="top" secondItem="XB8-AI-44g" secondAttribute="topMargin" constant="5" id="H5z-P6-tMW"/>
                                         <constraint firstItem="u5T-ng-AmU" firstAttribute="leading" secondItem="XB8-AI-44g" secondAttribute="leadingMargin" constant="45" id="cTG-9y-Tnd"/>
                                         <constraint firstItem="SKP-tJ-4wu" firstAttribute="top" secondItem="Amq-0y-DWI" secondAttribute="bottom" constant="8" id="dNH-YJ-a59"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="SKP-tJ-4wu" secondAttribute="bottom" constant="10" id="jS0-hO-stj"/>
                                         <constraint firstItem="Amq-0y-DWI" firstAttribute="top" secondItem="u5T-ng-AmU" secondAttribute="bottom" constant="8" id="l6t-4Y-zR8"/>
                                         <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="SKP-tJ-4wu" secondAttribute="trailing" id="sbN-wg-plC"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="u5T-ng-AmU" secondAttribute="trailing" constant="45" id="vva-GN-pao"/>
@@ -86,6 +92,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Posts" id="9fD-C7-rju"/>
+                    <connections>
+                        <outlet property="captionSearchBar" destination="SJ3-vv-N7i" id="lSA-Th-krT"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T49-Yu-dGQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -151,7 +160,7 @@
                             </constraints>
                         </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="vA2-eh-NeI" detailTextLabel="Rpq-rS-q0l" rowHeight="63" style="IBUITableViewCellStyleSubtitle" id="u2E-u3-B8h">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="commentCell" textLabel="vA2-eh-NeI" detailTextLabel="Rpq-rS-q0l" rowHeight="63" style="IBUITableViewCellStyleSubtitle" id="u2E-u3-B8h">
                                 <rect key="frame" x="0.0" y="326" width="375" height="63"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="u2E-u3-B8h" id="XN1-Qh-1WZ">
@@ -201,7 +210,7 @@
                         <sections>
                             <tableViewSection headerTitle="Upload Your Picture" id="ORf-7F-iDo">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="194" id="DeZ-ae-HtF">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="newPostCell" rowHeight="194" id="DeZ-ae-HtF">
                                         <rect key="frame" x="0.0" y="55.5" width="375" height="194"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="DeZ-ae-HtF" id="KVE-qt-3hn">
@@ -213,7 +222,9 @@
                                                 </imageView>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r2y-cg-Pib">
                                                     <rect key="frame" x="16" y="11" width="343" height="172"/>
-                                                    <state key="normal" title="Select Image" image="spaceEmptyState"/>
+                                                    <state key="normal" title="Select Image">
+                                                        <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    </state>
                                                     <connections>
                                                         <action selector="selectImageButtonTapped:" destination="VZ9-F0-hfd" eventType="touchUpInside" id="ekl-5H-z1S"/>
                                                     </connections>
@@ -346,6 +357,5 @@
     </scenes>
     <resources>
         <image name="Bulgogi_Beef__Main_" width="1400" height="1400"/>
-        <image name="spaceEmptyState" width="1024" height="569"/>
     </resources>
 </document>

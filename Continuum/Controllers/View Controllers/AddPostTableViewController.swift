@@ -18,6 +18,7 @@ class AddPostTableViewController: UITableViewController {
     //MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        postImageView.image = nil
     }
     
     override func viewDidDisappear(_ animated: Bool) {
